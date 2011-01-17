@@ -1,0 +1,9 @@
+
+<% if current_facebook_user %>
+  <h1>Welcome, <%= fb_name current_facebook_user %></h1>
+<% else %>
+  <p>To connect your account to facebook, login to facebook using the button below. This will allow you to login via your facebook account and add items to your news feed.</p>
+  <%= fb_login_and_redirect create_connection_path%>
+<% end %>
+
+
